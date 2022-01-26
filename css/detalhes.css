@@ -1,0 +1,37 @@
+.card {
+  box-shadow: 10px 10px 15px 0px rgb(0 0 0 / 21%);
+}
+
+body {
+  background-color: #454d55 !important;
+}
+
+@media screen and (min-width: 992px) {
+  #menulinks {
+    display: block;
+  }
+  #shmenulinks {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #shmenulinks {
+    display: block;
+  }
+}
+
+a:active,
+a:hover {
+  color: #043959;
+  box-shadow: 0 0 0 1px #163e55, 0 0 2px 1px rgba(255, 255, 255, 0.8);
+  outline: 1px solid transparent;
+}
+.detalhes {
+  padding-top: 100px;
+}
+.imgdetalhes {
+  float: left;
+  border-style: groove
+}
+
