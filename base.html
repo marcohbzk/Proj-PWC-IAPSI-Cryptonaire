@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cryptonaire - Home</title>
+    <link rel="icon" href="img/logocrypto.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body id="body">
+    <header>
+      <nav>
+        <!--Navbar-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+          <img id="logo" src="img/logocrypto.png" alt="Crypto" />
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="base.html" id="titulo">Cryptonaire</a>
+
+          <!-- Collapse button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#basicExampleNav"
+            aria-controls="basicExampleNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="basicExampleNav">
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  href="base.html"
+                  style="text-decoration: underline"
+                  ><i class="fa fa-fw fa-home"></i>Home<span class="sr-only"
+                    >(Atual)</span
+                  ></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="detalhes.html"
+                  ><i class="fa fa-book" aria-hidden="true"></i> Detalhes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favoritos.html"
+                  ><i class="fa fa-heart" aria-hidden="true"></i> Favoritos</a
+                >
+              </li>
+
+              <!-- Currency-->
+              <li class="dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  id="navbarDropdownMenuLink"
+                  data-toggle="dropdown"
+                  ><i class="fa fa-money" aria-hidden="true"></i> Moedas</a
+                >
+                <div class="dropdown-content">
+                  <a href="#" currencyName="eur" currencySymbol="€">EUR (€)</a>
+                  <a href="#" currencyName="usd" currencySymbol="$">USD ($)</a>
+                  <a href="#" currencyName="gbp" currencySymbol="£">GBP (£)</a>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Links -->
+
+            <form class="form-inline">
+              <div class="searchBox">
+                <input
+                  class="searchInput"
+                  type="search"
+                  placeholder="Pesquisar..."
+                  id="searchInput"
+                />
+                <button
+                  class="searchButton"
+                  type="button"
+                  id="searchButton"
+                  onclick="searchCoins(event)"
+                >
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </form>
+            <!-- Toggle -->
+            <ul>
+              <div class="onoff">
+                <input
+                  type="checkbox"
+                  class="toggle"
+                  id="onoff1"
+                  onClick="check()"
+                /><label id="top10" for="onoff1">Top 10</label>
+              </div>
+            </ul>
+          </div>
+          <!-- Collapsible content -->
+        </nav>
+        <!--/.Navbar-->
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col" style="margin-top: 90px">
+          <div class="table-responsive">
+            <table
+              class="table fixed_headers table-hover table-dark"
+              id="tabela"
+            >
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col" id="ranking">|Ranking|</th>
+                  <th scope="col"></th>
+                  <th scope="col" id="moeda">|Moeda|</th>
+                  <th scope="col" id="abreviatura"></th>
+                  <th scope="col" id="valor">|Valor Atual|</th>
+                  <th scope="col" id="mudanca">|Mudança nas Últimas 24h|</th>
+                </tr>
+              </thead>
+              <tbody class="scrollbar" id="style-1"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/setcurrency.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/searchbar.js"></script>
+    <script type="text/javascript">
+      window.onload = () => {
+        showAllCoins();
+      };
+    </script>
+  </body>
+</html>
