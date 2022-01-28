@@ -3,6 +3,12 @@ currency = JSON.parse(localStorage.currency);
 
 let criptoM = localStorage.criptomoeda;
 
+// ---------------- Navbar Responsive ------------------------------------------//
+
+document.querySelector(".navbar-toggler").addEventListener("click", function(e){document.querySelector(".collapse").classList.toggle("show");}); 
+
+document.querySelector("#shmenulinks").addEventListener("click",function(e){document.querySelector("#menulinks").classList.toggle("show");});
+
 // --------------------------------- Função Para Detalhes (Detalhes) --------------------------------- //
 
 function mostrarBase() {

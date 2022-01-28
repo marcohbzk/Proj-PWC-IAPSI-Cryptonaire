@@ -19,6 +19,10 @@ document.cookie = "SameSite";
 -> Localstorage não funciona em aba anónima.
 */
 
+// ---------------- Navbar Responsive ------------------------------------------//
+
+document.querySelector(".navbar-toggler").addEventListener("click", function(e){document.querySelector(".collapse").classList.toggle("show");}); 
+
 // --------------------------------- Função Alterar Top --------------------------------- //
 
 function check() {
