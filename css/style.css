@@ -321,6 +321,8 @@ a:hover {
   box-shadow: 0 0 0 1px #163e55, 0 0 2px 1px rgba(255, 255, 255, 0.8);
   outline: 1px solid transparent;
 }
+
+/* Icon Favoritos */
 .fa-custom {
   color: white;
 }
