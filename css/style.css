@@ -177,6 +177,11 @@ li.dropdown {
   background: none;
 }
 
+#body::-webkit-scrollbar {
+    display: none;
+}
+
+
 /*Scrollbar*/
 
 #style-1::-webkit-scrollbar-track {

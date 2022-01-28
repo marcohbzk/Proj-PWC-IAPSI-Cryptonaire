@@ -27,7 +27,7 @@
     />
   </head>
 
-  <body id="body">
+  <body id="body" style="overflow: auto;">
     <header>
       <nav>
         <!--Navbar-->
@@ -93,7 +93,6 @@
             </ul>
 
             <!-- Links -->
-
             <form class="form-inline">
               <div class="searchBox">
                 <input
@@ -113,11 +112,11 @@
               </div>
             </form>
           </div>
-          <!-- Collapsible content -->
         </nav>
-        <!--/.Navbar-->
       </nav>
     </header>
+	  
+	<!-- Conteúdo -->
     <div class="container detalhes">
           <div class="row">
             <div class="col-lg-3">
@@ -136,19 +135,23 @@
             </div>
             <div id="conteudo" class="col-lg-9">
               <div class="card">
-                <div class="card-body" id="details">    
-                </div>
+                <div class="card-body" id="details"></div>
               </div>
             </div>
-          </div>
         </div>
-      </body>
-      
-    </div>
+     </div>
+	  
+	<!-- Rodapé -->
+	<footer class="bg-light text-center text-lg-start">
+	  <div class="text-center p-3" style="background-color: #2f3640; color: white; margin-top: 17%;">
+		<a style="text-decoration: none; color: white; font-size:2;" target="_blank" href="https://github.com/marcohbzk/Proj-PWC-IAPSI"><i class="fa fa-github"></i></a> | copyright &copy;2022
+	  </div>
+	</footer>
+	  
+    <!-- Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/setcurrency.js"></script>
     <script type="text/javascript" src="js/detalhes.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>
-    </script>
   </body>
 </html>
