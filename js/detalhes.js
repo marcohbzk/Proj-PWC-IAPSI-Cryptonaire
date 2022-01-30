@@ -58,7 +58,11 @@ function mostrarGrafico() {
     url: `https://api.coingecko.com/api/v3/coins/${criptoM}?sparkline=true`,
   }).done(function (res) {
     console.log(res.market_data.current_price);
-	$("#details").sparkline(res.market_data.sparkline_7d.price, {type: 'line'});
+    let str = ``;
+    str += `       
+              $("#sparkline").sparkline(${res.market_data.sparkline_7d.price}, {type: 'line'});
+          `;
+    document.querySelector("#details").innerHTML = str;
   });
 }
 
