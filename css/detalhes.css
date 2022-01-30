@@ -35,3 +35,6 @@ a:hover {
   border-style: groove
 }
 
+.container.detalhes {
+    padding: 200px 20px;
+}
