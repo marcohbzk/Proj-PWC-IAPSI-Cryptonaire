@@ -54,11 +54,7 @@ function showAllCoins() {
     res.forEach((result) => {
       str += `
         <tr id="fila">
-            <th><button onclick="addStorage(this);" moeda="${
-              result.id
-            }" class="button-border button-favorite"><span class="fa-custom ${verifClass(
-        result.id
-      )}"><i class="fa fa-heart" aria-hidden="true"></i></span></button></th>
+            <th><button onclick="addStorage(this);" moeda="${result.id}" class="button-border button-favorite"><span class="fa-custom ${verifClass(result.id)}"><i class="fa fa-heart" aria-hidden="true"></i></span></button></th>
             <th scope="row"><span class="ranking">${
               result.market_cap_rank + "º"
             }</span></th>
@@ -178,6 +174,7 @@ function showFavCoins() {
     currency.name = JSON.parse(localStorage.currency).name;
     currency.symbol = JSON.parse(localStorage.currency).symbol;
   }
+	
   let favorite = localStorage.getItem("favorite");
   if (favorite != null) {
     favorite = JSON.parse(favorite);
@@ -213,9 +210,7 @@ function showFavCoins() {
               result.name
             }</span></td>
               <td><span class="abreviatura" style="text-align: left;">${result.symbol.toUpperCase()}</span></td>
-              <td><span class="valor">${
-                currency.symbol + result.current_price
-              }</span></td>
+              <td><span class="valor">${currency.symbol + result.current_price}</span></td>
           `;
             if (
               result.price_change_percentage_24h.toFixed(1).indexOf("-") == -1
@@ -236,7 +231,11 @@ function showFavCoins() {
       document.querySelector("#tabela>tbody").innerHTML = str;
     });
   }
+  if(favorite.length == 0){
+	alert("Não existem criptomoedas favoritas!");
+  }
 }
+
 function verifClass(moeda) {
   let favorites = getFavorite();
   if (favorites) {
