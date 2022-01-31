@@ -17,21 +17,6 @@ currency = JSON.parse(localStorage.currency);
 
 document.cookie = "SameSite";
 
-// --------------------------------- Ideias --------------------------------- //
-/*
-    ->  Refresh automático da informação das moedas.
-    ->    Search atualizado à medida da escrita.
-    ->      Animação no botão de favoritos.
-    ->        Search feito pelo Enter e pelo botão.
-    ->          Sparkline apenas na página dos detalhes.
-    ->             Conseguir pesquisar a moeda pelo ranking e por abreviaturas
-*/
-// --------------------------------- Manutenção --------------------------------- //
-/*
--> Página de favoritos tem espaços vazios.
--> Localstorage não funciona em aba anónima.
-*/
-
 // ---------------- Navbar Responsive ------------------------------------------//
 
 document.querySelector(".navbar-toggler").addEventListener("click", function(e){document.querySelector(".collapse").classList.toggle("show");}); 
@@ -143,6 +128,7 @@ function showTenCoins() {
     });
     document.querySelector("#tabela>tbody").innerHTML = str;
   });
+console.log(URL);
 }
 
 // --------------------------------- Função Para Chamar (Favorite) --------------------------------- //
