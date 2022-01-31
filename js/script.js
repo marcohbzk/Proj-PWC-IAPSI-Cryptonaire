@@ -1,6 +1,19 @@
 "use strict";
 
+let defaultcurrency = {
+  name: "eur",
+  symbol: "€"
+}
+
+function buildStorage() {
+  localStorage.currency = localStorage.currency || JSON.stringify(defaultcurrency)
+  localStorage.favorite = localStorage.favorite || []
+  }
+  
+buildStorage();
+
 currency = JSON.parse(localStorage.currency);
+
 
 document.cookie = "SameSite";
 
