@@ -10,7 +10,6 @@ document.querySelector(".navbar-toggler").addEventListener("click", function(e){
 document.querySelector("#shmenulinks").addEventListener("click",function(e){document.querySelector("#menulinks").classList.toggle("show");});
 
 // --------------------------------- Função Para Detalhes (Detalhes) --------------------------------- //
-
 function mostrarBase() {
   let itensAtivos = document.querySelectorAll("#menulinks a");
   itensAtivos.forEach((itemAtivo) => {
@@ -19,9 +18,10 @@ function mostrarBase() {
 
   document.querySelector("#base").classList.add("active");
 
+
   $.ajax({
     method: "GET",
-    url: `https://api.coingecko.com/api/v3/coins/${criptoM}?sparkline=true`,
+    url: `https://api.coingecko.com/api/v3/coins/${localStorage.criptomoeda}?sparkline=true`,
   }).done(function (res) {
     console.log(res);
     let str = ``;
@@ -42,7 +42,6 @@ function mostrarBase() {
     document.querySelector("#details").innerHTML = str;
   });
 }
-
 
 // --------------------------------- Função Para Mostrar Ativos (Detalhes) --------------------------------- //
 function mostrarGrafico() {

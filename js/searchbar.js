@@ -10,7 +10,8 @@ searchInput.addEventListener("keyup", event =>{
   } */
 })
 
-// --------------------------------- Função Procurar --------------------------------- //
+
+// --------------------------------- Função Procurar () --------------------------------- //
 function searchCoins(target) {
 
   if (localStorage.currency) {
@@ -56,8 +57,16 @@ function searchCoins(target) {
       }
 
       str += `</tr>`;
-
+		
+	  var path = window.location.pathname;
+	  var page = path.split("/").pop();
+	  console.log( page );
+	  if(page == "detalhes.html"){
+		  localStorage.criptomoeda = result.id; 
+		  location.reload();
+	  }else{
       document.querySelector("#tabela>tbody").innerHTML = str;
-    },
+	  }	
+	  },
   });
 }
